@@ -1,0 +1,60 @@
+\usepackage{titlesec} 
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+%Khai báo gói lệnh sử dụng logo facebook
+\usepackage{fontawesome}
+% Khai báo gói chèn link
+\usepackage{hyperref}
+% nếu muốn gói chèn link có màu thì khai báo gói \hyperlinkcolor{red!55!brown}( đoạn này phải như nào nữa mới ddc như này cơ
+
+
+%------------------Main Font-------------------------
+% \setmainfont{Fira Sans}
+\usepackage[vietnamese]{babel}
+\usepackage{fontspec}
+% \setmainfont{Times New Roman}
+%Make sure you have the compiler "XeLaTeX" activated on your settings for your LaTeX document in order to see the font 
+
+%------------------Color Set--------------------------
+\definecolor{LightBlue}{RGB}{66, 163, 251}
+\definecolor{DarkBlue}{RGB}{36, 100, 176}
+\definecolor{LightGray}{gray}{.94}
+\definecolor{DarkGray}{gray}{.172}
+\definecolor{Orange}{RGB}{229, 133, 3}
+\definecolor{MediumBlue}{RGB}{38, 119, 193}
+
+%------------------Section Default Setting-------------
+\titleformat*{\section}{\color{DarkBlue}\normalfont\bfseries\Huge}
+\titleformat*{\subsection}{\color{LightBlue}\normalfont\bfseries\LARGE}
+\titleformat*{\subsubsection}{\color{MediumBlue}\normalfont\bfseries\LARGE}
+
+%-------------------Section Numbers Removal------------
+\setcounter{secnumdepth}{0}
+
+
+%-------------------------Header & Footer------------------------
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{\textbf{{{Toán rời rạc}}}}
+
+
+\fancyhead[L]{
+\begin{tikzpicture}[remember picture,overlay] \node[anchor=north west, yshift=1.5mm, xshift=-1.5mm] at (current page.north west) {\includegraphics[height=25mm]{figures/header_corner.png}};
+\end{tikzpicture}
+\textbf{{Đề thi}}
+% \href{https://www.facebook.com/profile.php?id=100042139878268}{\color{blue}\faFacebookSquare~Vũ Huy}
+}
+
+
+
+
+\fancyfoot[C]{
+\begin{tikzpicture}[remember picture,overlay] \node[anchor=south east, yshift=-1.5mm, xshift=1.5mm] at (current page.south east) {\includegraphics[height=29mm]{figures/banner.png}};
+\end{tikzpicture}
+\textcolor{LightGray}{\thepage}
+}
