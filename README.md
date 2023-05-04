@@ -15,9 +15,9 @@ templatex latex and some small details
 
 # Study
 <img src="https://github.com/huyvu15/Latex_temp/blob/main/cartoon/char.png" alt="char" width="250" />
-<img src="https://github.com/huyvu15/Latex_temp/blob/main/cartoon/clock.png" alt="clock" width="250" />
-<img src="https://github.com/huyvu15/Latex_temp/blob/main/cartoon/pen.png" alt="pen" width="250" />
-<img src="https://github.com/huyvu15/Latex_temp/blob/main/cartoon/qu%E1%BB%83n%20s%C3%A1ch.png" alt="quyển sách" width="250" />
+<img src="https://github.com/huyvu15/Latex_temp/blob/main/cartoon/clock.png" alt="clock" width="250" /> 
+<img src="https://github.com/huyvu15/Latex_temp/blob/main/cartoon/pen.png" alt="pen" width="250" /> 
+<img src="https://github.com/huyvu15/Latex_temp/blob/main/cartoon/qu%E1%BB%83n%20s%C3%A1ch.png" alt="book" width="250" />
 
 
 # Nguồn
