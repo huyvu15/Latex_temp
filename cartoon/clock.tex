@@ -1,0 +1,68 @@
+% Title: Clock
+% Tags: Foreach, Node positioning, Coordinate calculations, Macros, Decorations
+% Author: Jacques Duma
+% Site: http://math.et.info.free.fr/TikZ/index.html
+
+\documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows}
+
+\usepackage{verbatim}
+
+\begin{comment}
+:Title: Clock
+:Tags: Foreach, Node positioning, Coordinate calculations, Macros, Decorations
+:Author: Jacques Duma
+:Site: http://math.et.info.free.fr/TikZ/index.html
+
+Display time with the LaTeX command \Clock.
+\end{comment}
+
+%: \Clock [shift={(<x>,<y>)}] {<radius>} {<hours>}{<miutes>}{<seconds>}
+\newcommand{\Clock}[5][shift={(0,0)}]%
+{\begin{scope}[#1,scale={#2/5},transform shape]
+% background
+\fill[color=yellow!50] (0,0) circle (5);
+% minutes ticks
+\foreach \a in {1,2,...,60}
+   \draw[blue] ($(6*\a:4.5)$) -- ($(6*\a:5)$);
+% hours ticks
+\foreach \a in {5,10,...,60} \draw[blue,fill,line width={#2*.4pt}]
+      ($(6*\a:3.5)$) circle (2pt) -- ($(6*\a:5)$);
+% hours digits
+\foreach \a in {1,2,...,12}
+   \node[text=blue,fill=yellow!50]
+        at ($(90-\a*30:4.3)$) {\Large \bf \a};
+% hours hand
+\draw[->,>=stealth',line width={#2*1.3pt}]
+   (0,0) -- ($(450-30*#3-0.5*#4-0.0083*#5:3.25)$);
+% minutes hand
+\draw[line width={#2*1.1pt},gray]
+   (0,0) -- ($(450-6*#4-0.1*#5:4.2)$);
+\draw[->,>=stealth',line width={#2*.7pt}]
+   (0,0) -- ($(450-6*#4-0.1*#5:4.45)$);
+% seconds hand
+\draw[>->,>=stealth',line width={#2*.6pt},color=gray!80!blue]
+   ($(270-6*#5:1)$) -- ($(450-6*#5:4.4)$);
+% clock center
+\draw[blue,line width={#2*.2pt},fill=gray] (0,0) circle (.2);
+\draw[blue,fill] (0,0) circle (.1);
+% clock border
+\draw[blue,line width={#2*.6pt}] (0,0) circle (5);
+\end{scope}}
+
+\begin{document} 
+
+\pagestyle{empty}
+
+\begin{center}
+\begin{tikzpicture}
+  \Clock {6} {11}{20}{39}
+  \Clock [shift={(-4,-8)}] {1.5} {3}{7}{12}
+  \Clock [shift={(3,-9)}] {3} {8}{33}{54}
+\end{tikzpicture}
+\end{center}
+ 
+\end{document}
+

@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{pgf-pie}
+\begin{document}
+ \begin{tikzpicture}
+ \pie{10/A, 20/B, 30/C, 40/D}
+ \end{tikzpicture}
+\begin{tikzpicture}
+ \pie[hide number]{10/A, 20/B, 30/C, 40/D}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \pie[scale font]{10/A, 20/B, 30/C, 40/D}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \pie[text=legend]{10/First, 20/Second, 30/Third, 40/Fourth}
+\end{tikzpicture}
+\end{document}

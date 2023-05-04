@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\tikzset{Viet/.pic={
+\begin{scope}[y=-1pt, x=1pt]
+    \path[fill] (123.956,18.278) -- (118.587,11.922) .. controls (117.178,10.254)
+      and (114.683,10.044) .. (113.013,11.453) -- (108.387,15.362) --
+      (118.86,27.761) -- (123.487,23.853) .. controls (125.156,22.442) and
+      (125.365,19.946) .. (123.956,18.278) -- cycle;
+
+    \path[fill] (106.351,17.082) -- (64.062,52.83) -- (74.537,65.24) --
+      (98.283,45.144) -- (98.3,45.129) -- (103.521,40.718) --
+      (116.824,29.48) -- cycle;
+
+    \path[fill] (55.44,70.847) -- (71.82,66.868) -- (61.969,55.24) -- cycle;
+  \end{scope}
+}}
+\begin{document}
+\begin{tikzpicture}
+	\path (0,0) pic{Viet};
+	\path (2,0) pic[color=red]{Viet};
+	\path (12,0) pic[xscale=-1,color=teal]{Viet};
+	\path (8,-1) pic[color=yellow!70!black,rotate=20]{Viet};
+\end{tikzpicture}
+
+\definecolor{cCFDCE5}{RGB}{207,220,229}
+\definecolor{c4EBFED}{RGB}{78,191,237}
+\definecolor{cFF6F52}{RGB}{255,111,82}
+\definecolor{c97E1F7}{RGB}{151,225,247}
+\definecolor{c3BA4BC}{RGB}{59,164,188}
+\definecolor{cFCD577}{RGB}{252,213,119}
+\definecolor{cE25749}{RGB}{226,87,73}
+\definecolor{cEAC36E}{RGB}{234,195,110}
+\definecolor{c415E72}{RGB}{65,94,114}
+\begin{tikzpicture}[y=0.5pt, x=0.5pt]
+\path[fill=cCFDCE5,rounded corners=0.0cm] (0.0,8.198) rectangle
+(370.957,503.85);
+\path[fill=c4EBFED] (432.23,93.99) -- (472.11,8.198) --
+(511.999,93.99) -- (511.999,479.048).. controls (511.999,492.721) and
+(500.916,503.84).. (487.243,503.84) -- (456.957,503.84).. controls
+(443.284,503.84) and (432.21,492.721).. (432.21,479.048) --
+(432.21,93.99) -- (432.23,93.99) -- cycle;
+\path[fill=cFF6F52] (511.996,438.44) -- (511.996,479.046).. controls
+(511.996,492.717) and (500.91,503.83).. (487.239,503.83) --
+(456.952,503.83).. controls (443.281,503.83) and (432.28,492.717)..
+(432.28,479.046) -- (432.28,438.44) -- (511.996,438.44) -- cycle;
+\path[fill=c97E1F7,rounded corners=0.0cm] (473.027,93.99) rectangle
+(487.872,438.438);
+\path[fill=c3BA4BC] (432.23,479.048).. controls (432.23,492.721) and
+(443.286,503.84).. (456.959,503.84) -- (464.59,503.84).. controls
+(457.654,503.84) and (452.095,492.721).. (452.095,479.048) --
+(452.095,93.99) -- (472.12,8.198) -- (432.24,93.99) --
+(432.24,479.048) -- cycle;
+\path[fill=cFCD577] (511.996,93.91) -- (432.28,93.91) --
+(472.096,8.195) -- cycle;
+\path[fill=cE25749] (464.512,503.82) -- (456.953,503.82).. controls
+(443.282,503.82) and (432.29,492.716).. (432.29,479.045) --
+(432.29,438.44) -- (452.091,438.44) -- (452.091,479.046).. controls
+(452.09,492.717) and (457.657,503.82).. (464.512,503.82) -- cycle;
+\path[fill=cEAC36E] (452.09,93.91) -- (432.28,93.91) --
+(472.096,8.195) -- cycle;
+\path[fill=cFCD577,rounded corners=0.0cm] (432.199,429.156) rectangle
+(512.0,447.714);
+\path[fill=c415E72,rounded corners=0.0cm] (76.918,72.858) rectangle
+(294.038,91.416);
+\path[fill=c415E72,rounded corners=0.0cm] (268.279,168.287) rectangle
+(324.57,186.845);
+\path[fill=c415E72,rounded corners=0.0cm] (46.393,168.287) rectangle
+(255.94,186.845);
+\path[fill=c415E72,rounded corners=0.0cm] (46.393,264.395) rectangle
+(324.57,282.953);
+\path[fill=c415E72,rounded corners=0.0cm] (121.681,216.341) rectangle
+(324.573,234.899);
+\path[fill=c415E72,rounded corners=0.0cm] (46.393,216.341) rectangle
+(109.35,234.899);
+\path[fill=c415E72,rounded corners=0.0cm] (46.393,408.556) rectangle
+(324.57,427.114);
+\path[fill=c415E72,rounded corners=0.0cm] (244.154,360.52) rectangle
+(324.57,379.06);
+\path[fill=c415E72,rounded corners=0.0cm] (46.393,360.52) rectangle
+(231.778,379.06);
+\end{tikzpicture}
+\end{document}
